@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product# content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+    <!--[if IE]><![endif]-->
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="https://www.blazemeter.com/sites/default/files/favicon.png" type="image/png" />
+    <meta name="description" content="BlazeMeter platform for load and performance testing enables dev and QA teams to run scalable and continuous testing for website, mobile, api and software." />
+    <meta name="keywords" content="Test Automation, Continuous Testing, DevOps, Continuous Integration, Continuous Delivery, JMeter, JMeter Cloud, Load Testing, Performance Testing, Cloud Testing, Stress Testing, Mobile Testing, Selenium WebDriver, Taurus, Open Source Testing" />
+    <meta name="generator" content="Drupal 7 (http://drupal.org)" />
+    <meta name="rights" content="© BlazeMeter, Ltd." />
+    <link rel="image_src" href="https://www.blazemeter.com/sites/all/themes/blazemeter/logo/blazemeter-logo-small.jpg" />
+    <link rel="canonical" href="https://www.blazemeter.com/" />
+    <link rel="shortlink" href="https://www.blazemeter.com/" />
+    <meta property="og:site_name" content="Continuous Performance Testing for DevOps | BlazeMeter" />
+    <meta property="og:url" content="https://www.blazemeter.com" />
+    <meta property="og:title" content="Meter and Performance Testing for DevOps I BlazeMeter" />
+    <meta property="og:description" content="BlazeMeter platform for load and performance testing enables dev and QA teams to run scalable and continuous testing for website, mobile, api and software" />
+    <meta property="og:image" content="https://www.blazemeter.com/sites/all/themes/blazemeter/images/blazemeter-logo-small.jpg" />
+    <title>JMeter and Performance Testing for DevOps I BlazeMeter</title>
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta http-equiv="cleartype" content="on">
+    <script src="https://cdn.optimizely.com/js/2124250606.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.blazemeter.com/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="https://www.blazemeter.com/sites/default/files/css/css_fmtWDof6YohQQgU5sTfDxHxk2_54gw6u85ns08tl8Bg.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="https://www.blazemeter.com/sites/default/files/css/css_cZVdNI-ZAsYr2RkjPBtrZi32UwwPG9JStEwjSIB5DGU.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="https://www.blazemeter.com/sites/default/files/css/css_9SDdB-12PqOCz6MtaaMAUsGQnU0riqsfkRQUUssXvH4.css" media="all" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script>window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.8/jquery.js'>\x3C/script>")</script>
+    <script src="https://www.blazemeter.com/sites/default/files/js/js_3TykeRWpejhD4-J3vdlaNXdULg9xhOZhbsppK0o2bUs.js"></script>
+    <script src="https://www.blazemeter.com/sites/default/files/js/js_LcfWOwNhWQO3dzVpQrcpgOGS54hiIiLNT1-gkru0eP0.js"></script>
+    <script src="https://www.blazemeter.com/sites/default/files/js/js_xpk996ROymbwB7vq3fwwkEeRWaiwsdr8ID3HUoGhxhw.js"></script>
+    <script>jQuery(document).ready(function($) {
+        $("#blazemeter-site-commercial-register-c input[name=form_id]").val("user_register");
+    });</script>
+    <script src="https://www.blazemeter.com/sites/default/files/js/js_-aTBLsc7TUx64Z2A_ICABKY-yAuW7vqgPREjqFxpUKI.js"></script>
+    <script>jQuery.extend(Drupal.settings, { "pathToTheme": "sites/all/themes/blazeng" });</script>
+    <script>jQuery(document).ready(function () { blazemeter_bza_url = "https://a.blazemeter.com";});</script>
+    <script src="https://www.blazemeter.com/sites/default/files/js/js_8xOfx5uJ8GpLSjEr_cunKEkMoK4T9Sm5yoHT2B8n78Q.js"></script>
+    <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"blazeng","theme_token":"gRGG_ae6pvlD5Uy3UF74RvVh06efkUl52qYuxc_dNKA","js":{"0":1,"sites\/all\/modules\/clientside_validation\/clientside_validation.ie8.js":1,"sites\/all\/modules\/clientside_validation\/clientside_validation.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.8.3\/jquery.js":1,"1":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/contentanalysis\/contentanalysis.js":1,"sites\/all\/modules\/contentanalysis\/APIEXAMPLE\/contentanalysisexample.js":1,"sites\/all\/modules\/extlink\/extlink.js":1,"sites\/all\/modules\/custom\/blazemeter_site\/jquery.ba-hashchange.min.js":1,"sites\/all\/libraries\/jgrowl\/jquery.jgrowl.min.js":1,"sites\/all\/modules\/nicemessages\/js\/nicemessages.js":1,"sites\/all\/modules\/webform\/js\/webform.js":1,"sites\/all\/modules\/webform_conditional\/webform_conditional.js":1,"2":1,"sites\/all\/modules\/clientside_validation\/jquery-validate\/jquery.validate.js":1,"3":1,"4":1,"sites\/all\/themes\/blazeng\/js\/lib\/vendor_plugins.js":1,"sites\/all\/themes\/blazeng\/js\/lib\/plugins.js":1,"sites\/all\/themes\/blazeng\/js\/lib\/nick.js":1,"sites\/all\/themes\/blazeng\/js\/jquery.cycle2.min.js":1,"sites\/all\/themes\/blazeng\/js\/jquery.hc-sticky.min.js":1,"sites\/all\/themes\/blazeng\/js\/jquery-scrollspy.js":1,"sites\/all\/themes\/blazeng\/js\/classie.js":1,"sites\/all\/themes\/blazeng\/js\/modernizr.custom.js":1,"sites\/all\/themes\/blazeng\/js\/progressButton.js":1,"sites\/all\/themes\/blazeng\/js\/pricing.js":1,"sites\/all\/themes\/blazeng\/js\/analys.js":1,"sites\/all\/themes\/blazeng\/js\/lib\/url.js":1,"sites\/all\/themes\/blazeng\/js\/lib\/velocity.min.js":1,"sites\/all\/themes\/blazeng\/js\/lib\/jquery.fs.tipper.js":1,"sites\/all\/themes\/blazeng\/js\/lib\/jquery.matchHeight.js":1,"sites\/all\/themes\/blazeng\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/youtube\/css\/youtube.css":1,"sites\/all\/modules\/extlink\/extlink.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/custom\/blazemeter_site\/blazemeter_site.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/jgrowl\/jquery.jgrowl.min.css":1,"sites\/all\/modules\/nicemessages\/css\/nicemessages_positions.css":1,"sites\/all\/modules\/nicemessages\/css\/nicemessages_jgrowl.css":1,"sites\/all\/modules\/nicemessages\/css\/shadows.css":1,"sites\/all\/modules\/tagclouds\/tagclouds.css":1,"sites\/all\/modules\/webform\/css\/webform.css":1,"sites\/all\/modules\/addtoany\/addtoany.css":1,"sites\/all\/themes\/zen\/system.menus.css":1,"sites\/all\/themes\/blazeng\/css\/styles.css":1,"sites\/all\/themes\/blazeng\/css\/component.css":1,"sites\/all\/themes\/blazeng\/css\/demo-slideshow.css":1,"sites\/all\/themes\/blazeng\/css\/jquery.fs.tipper.css":1,"sites\/all\/themes\/blazeng\/css\/blazey.css":1,"sites\/all\/themes\/blazeng\/css\/changlelog.css":1}},"blazemeter":{"stripe_public_key":"pk_live_FlsJiikP9bEn6lFil6d9Mttn","blazemeter_cookie":"blazemeter_user","blazemeter_bza_url":"https:\/\/a.blazemeter.com"},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"nicemessages":{"position":"center","items":[]},"webform_conditional_webform_client_form_711":{"fields":false,"nid":"711","showSpeed":null},"urlIsAjaxTrusted":{"\/black-friday-whitepaper":true,"https:\/\/a.blazemeter.com\/app\/sign-up":true},"clientsideValidation":{"forms":{"webform-client-form-711":{"errorPlacement":1,"general":{"errorClass":"error","wrapper":"li","validateTabs":"","scrollTo":1,"scrollSpeed":1000,"disableHtml5Validation":1,"validateOnBlur":1,"validateOnBlurAlways":0,"validateOnKeyUp":1,"validateBeforeAjax":0,"validateOnSubmit":1,"showMessages":0,"errorElement":"label"},"rules":{"submitted[first_name]":{"required":true,"messages":{"required":"First Name field is required.","maxlength":"First Name field has a max length of 128 characters."},"maxlength":128},"submitted[last_name]":{"required":true,"messages":{"required":"Last Name field is required.","maxlength":"Last Name field has a max length of 128 characters."},"maxlength":128},"submitted[email]":{"required":true,"messages":{"required":"Email field is required.","email":"The value in Email is not a valid email address."},"email":true}}},"webform-client-form-711--2":{"errorPlacement":1,"general":{"errorClass":"error","wrapper":"li","validateTabs":"","scrollTo":1,"scrollSpeed":1000,"disableHtml5Validation":1,"validateOnBlur":1,"validateOnBlurAlways":0,"validateOnKeyUp":1,"validateBeforeAjax":0,"validateOnSubmit":1,"showMessages":0,"errorElement":"label"},"rules":{"submitted[first_name]":{"required":true,"messages":{"required":"First Name field is required.","maxlength":"First Name field has a max length of 128 characters."},"maxlength":128},"submitted[last_name]":{"required":true,"messages":{"required":"Last Name field is required.","maxlength":"Last Name field has a max length of 128 characters."},"maxlength":128},"submitted[email]":{"required":true,"messages":{"required":"Email field is required.","email":"The value in Email is not a valid email address."},"email":true}}}},"general":{"usexregxp":0,"months":{"January":1,"Jan":1,"February":2,"Feb":2,"March":3,"Mar":3,"April":4,"Apr":4,"May":5,"June":6,"Jun":6,"July":7,"Jul":7,"August":8,"Aug":8,"September":9,"Sep":9,"October":10,"Oct":10,"November":11,"Nov":11,"December":12,"Dec":12}},"groups":{"webform-client-form-711":{},"webform-client-form-711--2":{}}}});</script>
+    <!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen/js/html5.js"></script>
+    <![endif]-->
+
+
+    <script id="bizible-settings" type="text/javascript" src="//cdn.bizible.com/_biz-a.js" async data-attach-secure-forms="true"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="alternate" media="only screen and (max-width: 768px)" href="https://www.blazemeter.com/mobile_version/index.php">
+    <!-- animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet" />
+    <link href="/sites/all/themes/blazeng/css/animation_stylesheets/application.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <!-- +++++++ -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="/sites/all/themes/blazeng/js/custom.js"></script>
+    <script src="/sites/all/themes/blazeng/js/maps.js"></script>
+
+
+    <script type="text/javascript">
+        setTimeout(function(){var a=document.createElement("script");
+            var b=document.getElementsByTagName("script")[0];
+            a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/1236.js?"+Math.floor(new Date().getTime()/3600000);
+            a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+
+
+</head>
+<body id="skrollr-body" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml" class="html front not-logged-in no-sidebars page-node page-node- page-node-1169 node-type-page" >
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgcEVVNVGwcHUFNSBwE="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(14),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,-1!==o.indexOf("dev")&&(s.dev=!0),-1!==o.indexOf("nr_dev")&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f?f.apply(this,a(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(15),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7);t("loader").features.stn=!0,t(6);var c=NREUM.o.EV;o.on("fn-start",function(t,e){var n=t[0];n instanceof c&&(this.bstStart=Date.now())}),o.on("fn-end",function(t,e){var n=t[0];n instanceof c&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),s.on("fn-start",function(){this.bstStart=Date.now()}),s.on("fn-end",function(t,e){i("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on("pushState-start",function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on("pushState-end",function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(t){i("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",r,!1),document.addEventListener("keypress",r,!1),document.addEventListener("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(16)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(16)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(16)(r);e.exports=r,o.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(16)(i);e.exports=i,a.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),a.inPlace(window,["setInterval"],"setInterval-"),a.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),i.on("setInterval-start",r),i.on("setTimer-start",o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",s)}function i(t){w.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<w.length;t++)r([],w[t]);w.length&&(w=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(16)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],w=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;l>r;r++)t.removeEventListener(d[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return i(r)}function i(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}function a(t,e){var n=f(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(11),u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(13),m=window.XMLHttpRequest;s.features.xhr=!0,t(9),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||10>h)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},a(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var a=i(r);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;l>s;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(t,e){return function(){o(t,[(new Date).getTime()].concat(a(arguments)),null,e)}}var o=t("handle"),i=t(14),a=t(15);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var s=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(s,function(t,e){newrelic[e]=r(f+e,"api")}),i(c,function(t,e){newrelic[e]=r(f+e)}),e.exports=newrelic,newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),o("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],14:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],15:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],16:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(15),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);var u=f[v[n]];return u&&u.push([w,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",v[n]=e,e in f||(f[e]=[])})}var m={},v={},w={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return w}function i(){return new r}var a="nr@context",s=t("gos"),c=t(14),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!m++){var t=h.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(l,function(e,n){t[e]||(t[e]=n)});var n="https"===d.split(":")[0]||t.sslForHttp;h.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=h.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(14),f=window,u=f.document;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:f.XMLHttpRequest,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var d=""+location,l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-943.min.js"},p=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),h=e.exports={offset:a(),origin:d,features:{},xhrWrappable:p};u.addEventListener?(u.addEventListener("DOMContentLoaded",i,!1),f.addEventListener("load",r,!1)):(u.attachEvent("onreadystatechange",o),f.attachEvent("onload",r)),s("mark",["firstbyte",a()],null,"api");var m=0},{}]},{},["loader",2,10,4,3]);</script><!-- Google Tag Manager -->
+<!-- This part was below popstate DIV. I moved it on Request KL -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-G7GV"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-G7GV');</script>
+<!-- End Google Tag Manager -->
+
+<script>
+    //  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var protocol = window.location.protocol;
+    var host = window.location.host;
+    var pathname = "/mobile_version/index.php";
+    var mobile_path = protocol+"//"+ host + pathname;
+    if(jQuery(window).width() < 769){
+        window.location.href = mobile_path;
+    }
+    //  }
+</script>
+<div class="page-wrapper front-new" id="main-page">
+    <!--     <div id="skrollr-body" class="content-wrapper"> -->
+    <div class="content-wrapper">
+        <header id="main_header">
+            <div id="logo">
+                <a id="logo_image" href="https://www.blazemeter.com/"><img src="/new_images/new_top_black_logo.svg"></a>
+            </div>
+            <div class="wrapper_mobile_hamburger">
+                <img id="main_mobile_hamburger" src="/mobile_version/mobile_images/hamburger.svg" alt="">
+            </div>
+            <nav class="top_main_menu">
+                <ul class="top_main_menu_desctop">
+                    <ul class="nav-links-list menu-submenu"><li class="menu-1154 first"><a href="/features" title="">Features</a></li><li class="menu-1156"><a href="/pricing" title="">Pricing</a></li><li class="menu-1157"><a href="/resources" title="">Resources</a></li><li class="menu-1158"><a href="/blog" title="">Blog</a></li><li class="menu-1159 last"><a href="http://info.blazemeter.com/request-demo-1" title="">Request a demo</a></li></ul>            <li id="hide_auth_block_in_mobile_version">
+                    <div class="auth-block">
+                        <!-- If not authenticated -->
+                        <div class="link-holder signup-link">
+                            <a href="https://a.blazemeter.com/app">Sign In</a>
+                        </div>
+                        <div id="sign-block" class="link-holder not-logged">
+                        </div>
+                        <div class="link-holder">
+                            <a href="https://a.blazemeter.com/user/register" class="signup signup-btn">Start Testing Now</a>
+                        </div>
+                    </div>
+                </li>
+                    <!--            <li id="mobile_version_menu_link_about"><a href="https://--><!--/about">ABOUT</a></li>-->
+                </ul>
+
+                <ul class="top_main_menu_mobile">
+                    <li><a href="https://www.blazemeter.com/mobile_version"><img id="main_mobile_main_menu_logo" src="/mobile_version/mobile_images/mobile_main_menu_logo.png"></a></li>
+                    <li><a href="https://www.blazemeter.com/features"><img class="main_mobile_main_menu_image" src="/mobile_version/mobile_images/main_menu_star_image.svg" alt=""> Features</a></li>
+                    <li><a href="https://www.blazemeter.com/pricing"><img class="main_mobile_main_menu_image" src="/mobile_version/mobile_images/main_menu_pricing_image.svg" alt=""> Pricing</a></li>
+                    <li><a href="https://www.blazemeter.com/contact-us"><img class="main_mobile_main_menu_image" src="/mobile_version/mobile_images/main_menu_contact_image.svg" alt=""> Contact</a></li>
+                </ul>
+                <div id="main_mobile_menu_start_testing_now">
+                    <a class="main_mobile_menu_start_testing_now" href="#">Start Testing Now</a>
+                </div>
+            </nav>
+        </header>
+
+
+        <h1 class="page__title title" id="page-title">Continuous Performance Testing for DevOps</h1>
+
+
+
+        <article class="node-1169 node node-page view-mode-full clearfix" about="/main-b" typeof="sioc:Item foaf:Document">
+
+            <header>
+                <span property="dc:title" content="Continuous Performance Testing for DevOps" class="rdf-meta element-hidden"></span>
+
+            </header>
+
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div id="main_c_container">
+                <span class="main_c_close_animation">Close</span>
+                <div class="hero-wrapper">
+                    <div class="hero">
+                        <div id="main_c_inner_container_top_image">
+                            <h2 id="front_text"><span id="main_b_top_fold_image_title_first_line">Performance Testing for the Continuous Delivery Era</span> <span id="main_b_top_fold_image_title_second_line">Run and analyze JMeter and other open source-based load tests from anywhere in the world</span></h2>
+                            <p id="main_b_top_fold_image_block_with_button"><a href="#" id="main_c_start_testing_now" class="get_started_button">Start Testing Now</a><button class="button" href="" id="main_b_start_play_button">See How It Works<span class="bounce animation_dark_arrow"></span></button></p>
+                        </div>
+                        <div class="slide" id="slide-1">
+                            <h1 class="animation_start_text">Performance Testing for APIs, Web &amp; Mobile Apps.<br /><span class="animation_bold_text">Build. Scale. Analyze. Automate.</span></h1>
+                            <div class="slide-main-image">
+                                <!--div id="animation_block_with_button">
+                                    <a class='button get_started_button start-testing-button'>Start Testing Now</a>
+                                </div-->
+
+                                <img src="/new_images/main_page_animation_images/Step-8_last-frame.png" /><div class="slide-1-cover" id="slide-1-cover-1"></div>
+                                <div class="slide-1-cover" id="slide-1-cover-2"></div>
+                                <div class="slide-1-cover" id="slide-1-cover-3"></div>
+                                <div class="slide-1-cover" id="slide-1-cover-4"></div>
+                                <div class="slide-1-cover" id="slide-1-cover-5"></div>
+                                <!--button class='button' href='' id='start_play_button'>See How It Works<span class="bounce animation_white_arrow"></span></button-->
+                            </div>
+                            <div id="star_testing_button2_block">
+                                <a class="button get_started_button start-testing-button start-testing-button2">Start Testing Now</a>
+                            </div>
+                            <div id="top_animation_scale">
+                                <span class="point first"></span>
+                                <span id="build_progress" class="steps">Build</span>
+                                <div class="progressbar"><div class="outer_progressbar"></div></div>
+                                <span class="point two"></span>
+                                <span id="run_at_scale" class="steps">Scale</span>
+                                <div class="progressbar two"><div class="outer_progressbar_two"></div></div>
+                                <span class="point three"></span>
+                                <span id="analyze" class="steps">Analyze</span>
+                                <div class="progressbar three"><div class="outer_progressbar_three"></div></div>
+                                <span class="point four"></span>
+                                <span id="automate" class="steps">Automate</span>
+                            </div>
+                        </div>
+                        <div class="slide" id="slide-2">
+                            <h1>
+                                <span class="animation_bold_text">Build</span><br /><span class="animation_light_text">Use Your Favorite Open Source Tools to Build Your Tests</span>
+                            </h1>
+
+                            <div class="slide-main-image" data-gif="/new_images/main_page_animation_images/Step-2.gif"></div>
+                        </div>
+                        <div class="slide" id="slide-3">
+                            <h1>
+                                <span class="animation_bold_text">Scale</span><br /><span class="animation_light_text">Run Hundreds of Load Tests in Parallel for up to 1 Million Concurrent Users From 25 Geo-Locations</span>
+                            </h1>
+                            <div class="slide-main-image" data-gif="/new_images/main_page_animation_images/Step-3.gif">
+                                <img /></div>
+                        </div>
+                        <div class="slide" id="slide-4">
+                            <h1>
+                                Analyze
+                            </h1>
+                            <h2>
+                                View &amp; Analyze Results in Real-Time
+                            </h2>
+                            <div class="slide-main-image" data-gif="/new_images/main_page_animation_images/Step-4.gif"></div>
+                        </div>
+                        <div class="slide" id="slide-5">
+                            <h1>
+                                <span class="animation_bold_text">Automate</span><br /><span id="first_part_light_text">Configure Your Performance<br /> Tests,</span>
+                                <span id="second_part_light_text">
+               and Integrate With Your <br />
+              Continuous Delivery Platform.
+           </span>
+                            </h1>
+                            <div class="slide-main-image">
+                                <img src="/new_images/main_page_animation_images/taurus code.png" /></div>
+                        </div>
+                        <div class="slide" id="slide-6"></div>
+                        <div class="slide" id="slide-7">
+                            <div class="logos">
+                                <div class="logo" id="logo-1">
+                                    <img src="/new_images/main_page_animation_images/1.png" /></div>
+                                <div class="logo" id="logo-2">
+                                    <img src="/new_images/main_page_animation_images/2.png" /></div>
+                                <div class="logo" id="logo-3">
+                                    <img src="/new_images/main_page_animation_images/3.png" /></div>
+                                <div class="logo" id="logo-4">
+                                    <img src="/new_images/main_page_animation_images/4.png" /></div>
+                                <div class="logo" id="logo-5">
+                                    <img src="/new_images/main_page_animation_images/5.png" /></div>
+                                <div class="logo" id="logo-6">
+                                    <img src="/new_images/main_page_animation_images/6.png" /></div>
+                                <div class="logo" id="logo-7">
+                                    <img src="/new_images/main_page_animation_images/7.png" /></div>
+                                <div class="logo" id="logo-8">
+                                    <img src="/new_images/main_page_animation_images/8.png" /></div>
+                                <div class="logo" id="logo-9">
+                                    <img src="/new_images/main_page_animation_images/9.png" /></div>
+                            </div>
+                        </div>
+                        <div class="slide" id="slide-8">
+                            <h1 class="animation_start_text">Performance Testing for APIs, Web &amp; Mobile Apps.<br /><span class="animation_bold_text">Build. Scale. Analyze. Automate. </span></h1>
+                            <div class="slide-main-image">
+                                <div id="last_animation_block_with_button">
+
+                                    <a class="button get_started_button start-testing-button">Start Testing Now</a>
+                                </div>
+                                <img src="/new_images/main_page_animation_images/Step-8_last-frame.png" /><button class="button" href="" id="last_start_play_button">Play Again<span class="bounce animation_white_arrow"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_c_bg_graphs"></div>
+                </div>
+                <div id="main_b_performance_testing">
+                    <div id="main_b_performance_testing_inner_top_container">
+                        <h3>Performance Testing as Code</h3>
+                        <p>Run massively scalable, open source-based performance tests against all of your apps, from web and mobile apps to microservices and APIs.</p>
+                        <p style="padding-top: 15px">Write tests as code in domain specific language (DSL) to generate and instantly run JMeter tests without leaving your favorite application development tool.  Use the same DSL to configure and launch tests using any major open source performance testing tool.</p>
+                        <p style="padding-top: 15px">Validate performance at every software delivery stage. </p>
+                    </div>
+                    <div class="main_b_separator"></div>
+                    <div id="main_b_performance_testing_inner_bottom_container">
+                        <div class="main_b_performance_testing_inner_blocks" id="main_b_performance_testing_left_block">
+                            <p><img alt="Load Testing With Open Source Tools" src="/new_images/main_b_images/main_b_open_source.png" /></p>
+                            <p class="main_b_subtitle">Open Source Compatible</p>
+                            <p class="main_b_text">Design and execute load tests for up to 1 million concurrent users while using leading open source tools, such as: JMeter, Selenium, Gatling and Locust.</p>
+                            <p class="main_a_b_opensource_logos">
+                                <a href="https://guide.blazemeter.com/hc/en-us/articles/206733309-BlazeMeter-for-people-who-are-familiar-with-JMeter"><img class="main_a_b_jmeter_image" src="/new_images/main_b_images/main_b_jmeter_logo.png" alt="JMeter" /></a>
+                                <a href="https://guide.blazemeter.com/hc/en-us/articles/207387369-Creating-a-New-Taurus-Test"><img class="main_a_b_gatling_image" src="/new_images/main_b_images/main_b_gatling_logo.png" alt="JMeter" /></a>
+                                <a href="https://guide.blazemeter.com/hc/en-us/articles/206732879-Webdriver-Test"><img class="main_a_b_selenium_image" src="/new_images/main_b_images/main_b_selenium_logo.png" alt="JMeter" /></a>
+                                <a href="https://guide.blazemeter.com/hc/en-us/articles/207387369-Creating-a-New-Taurus-Test"><img class="main_a_b_locust_image" src="/new_images/main_b_images/main_b_locust_logo.png" alt="JMeter" /></a>
+                            </p>
+                        </div>
+                        <div class="main_b_performance_testing_inner_blocks" id="main_b_performance_testing_average_block">
+                            <p><img alt="Mobile Testing With JMeter" src="/new_images/main_b_images/main_b_continuous_integration.png" /></p>
+                            <p class="main_b_subtitle">Mobile Performance Testing</p>
+                            <p class="main_b_text">Record real mobile device traffic and playback at any scale, from any geographic region, through real mobile network conditions.
+                                Generate secure and nonsecure traffic, testing mobile app, mobile web, wearables, and internet of things (IoT) endpoints.</p>
+                        </div>
+                        <div class="main_b_performance_testing_inner_blocks" id="main_b_performance_testing_right_block">
+                            <p><img alt="Performance Testing" src="/new_images/main_b_images/main_b_mobile_testing.png" /></p>
+                            <p class="main_b_subtitle">Continuous Integration Testing</p>
+                            <p class="main_b_text">Shift your performance testing left and make sure your code is tested for performance at every stage of the development lifecycle.</p>
+                            <p class="main_b_text last_row">Embed tests into your delivery workflow and run them from behind the firewall or on the public cloud. </p>
+                        </div>
+                        <div id="main_b_read_more"><a href="/features">Read more </a></div>
+                    </div>
+                </div>
+                <div id="main_b_companies_logo">
+                    <div id="main_b_companies_logo_inner_container">
+                        <div id="main_b_companies_logo_top_row">
+                            <div class="main_b_companies" id="main_b_first_row_first_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_gap.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_first_row_second_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_nbcuniversal.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_first_row_third_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_pfizer.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_first_row_four_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_adobe.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_first_row_fifth_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_atlassian.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_first_row_six_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_nfl.png" /></a></div>
+                            <div class="clear"> </div>
+                        </div>
+                        <div id="main_b_companies_logo_bottom_row">
+                            <div class="main_b_companies" id="main_b_second_row_first_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_dicecom.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_second_row_second_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_omnifone.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_second_row_third_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_mattel.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_second_row_four_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_clearleap.png" /></a></div>
+                            <div class="main_b_companies" id="main_b_second_row_fifth_logo"><a href="/customers"><img alt="Customers running performance testing with BlazeMeter" src="/new_images/main_b_images/main_b_ancestry.png" /></a></div>
+                            <div class="clear"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="quotes_b">
+                    <ul><li>
+                        <div class="main_b_bottom_image" id="main_b_bottom_image_ancestry">
+                            <a href="/customers">
+                                <div class="main_b_quotes_b_inner_container">
+                                    <p>We gained more control over our development speeds, scripts and customer response times in our Continuous Integration environment thanks to BlazeMeter."</p>
+                                    <p id="main_b_bottom_image_author_quote">Norm Warren, Developer</p>
+                                    <p><img alt="" src="/new_images/main_b_images/main_b_bottom_ancestry.png" /></p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                        <li>
+                            <div class="main_b_bottom_image" id="main_b_bottom_image_movietickets">
+                                <a href="/customers">
+                                    <div class="main_b_quotes_b_inner_container">
+                                        <p>“People today have really high expectations on how a website performs. Performance is everything. If we can’t serve pages quickly, our customers will go somewhere else. Load testing with BlazeMeter enabled us to meet those expectations.”</p>
+                                        <p id="main_b_bottom_image_author_quote">Craig Lefkowitz, Director of Infrastructure Systems</p>
+                                        <p><img alt="" src="/new_images/main_b_images/main_b_movie_tickets_logo.png" /></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main_b_bottom_image" id="main_b_bottom_image_clearleap">
+                                <a href="/customers">
+                                    <div class="main_b_quotes_b_inner_container">
+                                        <p>"BlazeMeter was our indispensable ally as our team evolved from focusing primarily on B2B application testing to including B2C apps and more frequent build and test cycles." </p>
+                                        <p id="main_b_bottom_image_author_quote">Alex Emmermann, VP Engineering</p>
+                                        <p><img alt="" src="/new_images/main_b_images/main_b_clearleap_bottom_logo.png" /></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="main_b_bottom_image" id="main_b_bottom_image_mattel">
+                                <a href="/customers">
+                                    <div class="main_b_quotes_b_inner_container">
+                                        <p>"All of our performance testing was handled by a third party. It was expensive and we had no control. Now, all of the Mattel sites are using BlazeMeter to validate performance. They love the flexibility, fluid interface and friendly staff from BlazeMeter. There's no turning back." </p>
+                                        <p id="main_b_bottom_image_author_quote">Nitin Jindal, Performance Engineer</p>
+                                        <p><img alt="" src="/new_images/main_b_images/main_b_mattel_botttom_logo.png" /></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul></div>
+            </div></div></div></div>
+
+
+        </article>
+
+
+
+
+
+
+    </div>
+</div>
+
+<footer id="footer" class="region region-footer">
+    <div id="block-block-24" class="block block-block first odd">
+
+
+        <footer id="main_b_footer"><div id="main_b_footer_inner_container">
+            <div class="main_b_footer_inner_blocks" id="main_b_footer_first_block"><img alt="" id="main_b_logo_footer" src="/new_images/main_b_images/main_b_footer_logo.png" /></div>
+            <div class="main_b_footer_inner_blocks" id="main_b_footer_second_block">
+                <ul><li class="main_b_footer_nav_title" id="main_b_footer_company">Company</li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/why-we-blaze">Why We Blaze</a></li>
+                    <li><a href="/partners">Partners</a></li>
+                    <li><a href="/join-our-team">Careers</a></li>
+                    <li><a href="/blazemeter-news">News &amp; Events</a></li>
+                </ul></div>
+            <div class="main_b_footer_inner_blocks" id="main_b_footer_third_block">
+                <ul><li class="main_b_footer_nav_title" id="main_b_footer_resources">Resources</li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="http://info.blazemeter.com/webinar">Live Demo</a></li>
+                    <!--li><a href="#">Webinars</a></li-->
+                    <li><a href="http://status.blazemeter.com/">Status</a></li>
+                    <li><a href="https://www.blazemeter.com/changelog">Changelog</a></li>
+                    <li><a href="/jmeter">Learn JMeter</a></li>
+                    <li><a href="/jenkins">Learn Jenkins</a></li>
+                </ul></div>
+            <div class="main_b_footer_inner_blocks" id="main_b_footer_four_block">
+                <ul><li class="main_b_footer_nav_title" id="main_b_footer_use_cases">Use Cases</li>
+                    <li><a href="/usecases#features-continuous">Continuous Integration</a></li>
+                    <li><a href="/usecases#features-performance">Performance &amp; Load Testing</a></li>
+                    <li><a href="/usecases#features-mobile">Mobile Testing</a></li>
+                    <li><a href="/case_studies">Case Studies</a></li>
+                </ul></div>
+            <div class="main_b_footer_inner_blocks" id="main_b_footer_fifth_block">
+                <ul><li class="main_b_footer_nav_title" id="main_b_footer_need_help">Need Help?</li>
+                    <li><a href="/contact-us">Contact Us</a></li>
+                    <li><a href="/support">Support</a></li>
+                    <li><a href="https://guide.blazemeter.com/hc/en-us">API Documentation</a></li>
+                    <li><a href="https://guide.blazemeter.com/hc/en-us">Knowledge Base</a></li>
+                    <li><a href="/partners">Become a Partner</a></li>
+                </ul></div>
+            <div class="clear"> </div>
+        </div>
+            <div id="main_b_footer_social_networks">
+                <div id="main_b_social_networks_inner_container">
+                    <div class="main_b_footer_social_networks_inner_blocks"><a href="https://twitter.com/BlazeMeter" target="_blank"><img alt="" src="/new_images/main_b_images/main_b_twitter.png" /></a></div>
+                    <div class="main_b_footer_social_networks_inner_blocks"><a href="https://www.facebook.com/BlazeMeter" target="_blank"><img alt="" src="/new_images/main_b_images/main_b_facebook.png" /></a></div>
+                    <div class="main_b_footer_social_networks_inner_blocks"><a href="https://www.linkedin.com/company/blazemeter" target="_blank"><img alt="" src="/new_images/main_b_images/main_b_in.png" /></a></div>
+                    <div class="main_b_footer_social_networks_inner_blocks"><a href="https://plus.google.com/explore/BlazeMeter" target="_blank"><img alt="" src="/new_images/main_b_images/main_b_googleplus.png" /></a></div>
+                    <div class="main_b_footer_social_networks_inner_blocks"><a href="https://www.youtube.com/user/BlazeMeterSupport" target="_blank"><img alt="" src="/new_images/main_b_images/main_b_youtube.png" /></a></div>
+                    <div class="main_b_footer_social_networks_inner_blocks"><a href="http://feedburner.google.com/fb/a/mailverify?uri=JmeterCloudBlog"><img alt="" src="https://d3qmoqvtroy6p7.cloudfront.net/wifi.png" /></a></div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+            <div id="main_b_footer_rights">
+                <div id="main_b_footer_rights_inner_container"><span id="main_b_footer_rights_left">By creating your account, you agree to our terms of sevice. © 2016 BlazeMeter. All rights reserved. </span> <span id="main_b_footer_rights_right"> <a href="/terms-service">Terms of use </a> <a href="/privacy-policy">Privacy Policy</a> <a href="/third-party-licences"> License Acknowledgements</a> </span></div>
+            </div>
+        </footer>
+    </div>
+    <div id="block-block-25" class="block block-block last even">
+
+
+        <div id="main_mobile_footer">
+            <div id="main_mobile_footer_inner_container"><img alt="" id="main_mobile_logo_footer" src="/mobile_version/mobile_images/logo_footer.png" /><span id="main_mobile_footer_social_network"> <a href="https://twitter.com/BlazeMeter"><img alt="" src="/mobile_version/mobile_images/twitter.png" /></a> <a href="https://www.facebook.com/BlazeMeter"><img alt="" src="/mobile_version/mobile_images/facebook.png" /></a> <a href="https://www.linkedin.com/company/blazemeter"><img alt="" src="/mobile_version/mobile_images/in.png" /></a> <a href="https://accounts.google.com/ServiceLogin?passive=1209600&amp;osid=1&amp;continue=https://plus.google.com/explore/BlazeMeter&amp;followup=https://plus.google.com/explore/BlazeMeter"><img alt="" src="/mobile_version/mobile_images/googleplus.png" /></a> <a href="https://www.youtube.com/user/BlazeMeterSupport"><img alt="" src="/mobile_version/mobile_images/youtube.png" /></a> </span></div>
+            <nav id="main_mobile_footer_navigation"><p><a href="/features">Features</a> <a href="/pricing">Pricing</a> <a href="/about">About</a> <a href="/blog">Blog</a> <a href="/join-our-team">Careers</a></p>
+                <p><a href="/contact-us">Contact</a> <a href="/terms-service">Terms of Use</a> <a href="/privacy-policy">Privacy Policy</a></p>
+            </nav><div id="main_mobile_all_rights">© <script>
+            <!--//--><![CDATA[// ><!--
+
+            var date = new Date();
+            document.write(date.getFullYear());
+
+            //--><!]]>
+        </script>BlazeMeter. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+</div>
+<!-- Popup -->
+<div class="popup" id="signup-popup">
+    <div class="popup-holder">
+        <form action="https://a.blazemeter.com/app/sign-up" method="post" id="blazemeter-site-commercial-register-c" accept-charset="UTF-8"><div><strong class="title"></strong><strong class="title">Start Testing For Free</strong><a href=https://a.blazemeter.com/app/social?provider=Google class="btn btn-Google">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve"><g>
+    <path d="M52.218,25.852h-7.512v-7.51c0-0.573-0.465-1.039-1.037-1.039H41.53c-0.576,0-1.041,0.466-1.041,1.039v7.51h-7.512 c-0.572,0-1.039,0.467-1.039,1.041v2.139c0,0.574,0.467,1.039,1.039,1.039h7.512v7.514c0,0.574,0.465,1.039,1.041,1.039h2.139 c0.572,0,1.037-0.465,1.037-1.039V30.07h7.512c0.572,0,1.039-0.465,1.039-1.039v-2.139C53.257,26.318,52.79,25.852,52.218,25.852z"></path>
+    <path d="M26.974,32.438c-1.58-1.119-3.016-2.76-3.041-3.264c0-0.918,0.082-1.357,2.141-2.961c2.662-2.084,4.128-4.824,4.128-7.719 c0-2.625-0.802-4.957-2.167-6.595h1.059c0.219,0,0.434-0.068,0.609-0.196l2.955-2.141c0.367-0.263,0.521-0.732,0.381-1.161 c-0.141-0.428-0.537-0.72-0.988-0.72H18.835c-1.446,0-2.915,0.255-4.357,0.751c-4.816,1.661-8.184,5.765-8.184,9.978 c0,5.969,4.624,10.493,10.805,10.635c-0.121,0.473-0.182,0.939-0.182,1.396c0,0.92,0.233,1.791,0.713,2.633c-0.056,0-0.11,0-0.17,0 c-5.892,0-11.21,2.891-13.229,7.193c-0.526,1.119-0.794,2.25-0.794,3.367c0,1.086,0.279,2.131,0.826,3.113 c1.269,2.27,3.994,4.031,7.677,4.961c1.901,0.48,3.944,0.725,6.065,0.725c1.906,0,3.723-0.246,5.403-0.732 c5.238-1.521,8.625-5.377,8.625-9.828C32.032,37.602,30.659,35.045,26.974,32.438z M10.283,42.215c0-3.107,3.947-5.832,8.446-5.832 h0.121c0.979,0.012,1.934,0.156,2.834,0.432c0.309,0.213,0.607,0.416,0.893,0.611c2.084,1.42,3.461,2.357,3.844,3.861 c0.09,0.379,0.135,0.758,0.135,1.125c0,3.869-2.885,5.83-8.578,5.83C13.663,48.242,10.283,45.596,10.283,42.215z M14.377,12.858 c0.703-0.803,1.624-1.227,2.658-1.227l0.117,0.002c2.921,0.086,5.716,3.341,6.23,7.256c0.289,2.192-0.199,4.253-1.301,5.509 c-0.705,0.805-1.613,1.229-2.689,1.229c0,0,0,0-0.002,0h-0.047c-2.861-0.088-5.716-3.467-6.227-7.377 C12.829,16.064,13.289,14.099,14.377,12.858z"></path>
+  </g></svg>
+            <span>&nbsp&nbspSign in with Google</span>
+        </a>
+            <span style="position:relative;left:45%;display:inline-block;margin-top:15px;">OR</span>
+            <div class="form-item form-type-textfield form-item-firstName">
+                <input placeholder="First Name" type="text" id="edit-firstname" name="firstName" value="" size="60" maxlength="128" class="form-text required" />
+            </div>
+            <div class="form-item form-type-textfield form-item-lastName">
+                <input placeholder="Last Name" type="text" id="edit-lastname" name="lastName" value="" size="60" maxlength="128" class="form-text required" />
+            </div>
+            <div class="form-item form-type-textfield form-item-email">
+                <input placeholder="Email" type="text" id="edit-email" name="email" value="" size="60" maxlength="128" class="form-text required" />
+            </div>
+            <div class="form-item form-type-password form-item-password">
+                <input placeholder="Password" maxlength="" type="password" id="edit-password" name="password" size="60" class="form-text required" />
+            </div>
+            <input type="hidden" name="name" value="101468841515" />
+            <input type="hidden" name="fake-password" value="*Password" />
+            <input type="hidden" name="portalID" value="208250" />
+            <input type="hidden" name="formGUID" value="f1643c9e-2920-4c51-a907-d131feee78c8" />
+            <div class="popup-submit-holder">
+                <button style="display:none;" class="main-btn form-submit progress-button form-submit" data-style="rotate-angle-bottom" data-perspective="" data-horizontal=""  id="edit-submit">Sign up</button>
+                <input class="main-btn form-submit form-submit" type="submit" id="edit-submit--3" name="op" value="Sign Up" /></div><p class="terms">By clicking Sign Up, you agree to our <a href="/terms-service">Terms of Service</a></p><input type="hidden" name="form_build_id" value="form-6F9zLBbAuzTQMLOwwpdxL3cr4AMKEZh1IFcku1UKzzU" />
+            <input type="hidden" name="form_id" value="blazemeter_site_commercial_register_c" />
+        </div></form>            <div class="close-popup"><a href="#"></a></div>
+    </div>
+    <div class="additional_bottom_block">
+        Want to learn more before trying us out? <a href="https://guide.blazemeter.com/hc/en-us">Click here</a>
+    </div>
+</div>
+
+
+<!-- /Popup -->
+<!-- animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TimelineMax.min.js"></script>
+<!--<script src="/sites/all/themes/blazeng/js/application.js"></script>-->
+<script src="/sites/all/themes/blazeng/js/animation_application_on_main_c.js"></script>
+<script type="text/javascript" src="/sites/all/themes/blazeng/js/lib/jquery.smslider.min.js?nui2vq"></script>
+<script type="text/javascript" src="/sites/all/themes/blazeng/js/slide_show_main_page.js?nui2vq"></script>
+<script type="text/javascript" src="/sites/all/themes/blazeng/js/main_b_page.js"></script>
+<!-- +++++++ -->
+<script>
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'blazemeter'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());</script>
+<script src="https://www.blazemeter.com/sites/default/files/js/js_UeHd_QGDGF4q1Wu73SwGz_Mm1K_MiLO_LQ7bfELuP0Q.js"></script>
+
+<!-- BEGIN Oktopost Lead Capture -->
+<script type="text/javascript" src="//okt.to/okt.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        _addEvents('00129ERNtC1I8b1');
+    })();
+</script>
+<!-- END Oktopost Lead Capture -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"51ba6d484e","applicationID":"4742000","transactionName":"YVwGMBMADxdRVBYLClgWJQcVCA4KH1kNBgBpSQUDBD4XDVVA","queueTime":0,"applicationTime":331,"atts":"TRsRRlsaHEgSVkBYHktE","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
